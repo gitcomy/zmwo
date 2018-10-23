@@ -9,15 +9,10 @@ $(document).ready(function(){
   a.filter(":contains('Theme panel')").each(function() {  $(this).html($(this).html() .replace("Theme panel", "控制面板"));}); 
   $("#wp-admin-bar-our_support_item").remove();
   //--------------控制面板---------------
-  //面板标题 
-  var c =  $(".td-panel-main-header");
-  var zm_by ='  © 筑梦汉化 - <a href="https://www.zmwo.com" title="筑梦窝" target="_blank">https://zmwo.com</a>    主题版本9.0.1';
-  c.filter(":contains('Theme panel')").each(function() { $(this).html($(this).html().replace("Theme panel",  "控制面板"));}); 
-  c.filter(":contains('version: 9.0.1')").each(function() { $(this).html($(this).html().replace("version: 9.0.1", zm_by ));}); 
   //面板目录
   var b =  $(".td-panel-menu");
   b.filter(":contains('HEADER')").each(function() { $(this).html($(this).html().replace("HEADER", "头部"));}); 
-  b.filter(":contains('FOOTER')").each(function() { $(this).html($(this).html().replace("FOOTER", "底部"));}); 
+  b.filter(":contains('FOOTER')").each(function() { $(this).html($(this).html().replace("FOOTER", "页脚"));}); 
   b.filter(":contains('ADS')").each(function() { $(this).html($(this).html().replace("ADS", "广告"));}); 
   b.filter(":contains('LAYOUT SETTINGS')").each(function() { $(this).html($(this).html().replace("LAYOUT SETTINGS", "布局设置"));}); 
   b.filter(":contains('TEMPLATE SETTINGS')").each(function() { $(this).html($(this).html().replace("TEMPLATE SETTINGS", "模板"));}); 
@@ -33,48 +28,20 @@ $(document).ready(function(){
   b.filter(":contains('CUSTOM CODE')").each(function() { $(this).html($(this).html().replace("CUSTOM CODE", "自定义代码"));}); 
   b.filter(":contains('ANALYTICS/JS CODES')").each(function() { $(this).html($(this).html().replace("ANALYTICS/JS CODES", "引入统计/JS"));}); 
   b.filter(":contains('SOCIAL NETWORKS')").each(function() { $(this).html($(this).html().replace("SOCIAL NETWORKS", "社交"));}); 
-  b.filter(":contains('CPT \& TAXONOMY')").each(function() { $(this).html($(this).html().replace("CPT \& TAXONOMY", "CPT 和 分支"));}); 
+  b.filter(":contains('CPT & TAXONOMY')").each(function() { $(this).html($(this).html().replace("CPT & TAXONOMY", "CPT 和 分支"));}); 
   b.filter(":contains('Import / export')").each(function() { $(this).html($(this).html().replace("Import / export", "注册 / 重置"));}); 
   b.filter(":contains('EXPORT')").each(function() { $(this).html($(this).html().replace("EXPORT", "重置"));}); 
   b.filter(":contains('PLUGINS')").each(function() { $(this).html($(this).html().replace("PLUGINS' SETTINGS", "插件设置"));}); 
   b.filter(":contains('MULTI-PURPOSE')").each(function() { $(this).html($(this).html().replace("MULTI-PURPOSE", "插件"));}); 
   b.filter(":contains('BACK')").each(function() { $(this).html($(this).html().replace("BACK", "返回"));}); 
+  //面板标题 
+  var c =  $(".td-panel-main-header");
+  var zm_by ='  © 筑梦汉化 - <a href="https://www.zmwo.com" title="筑梦窝" target="_blank">https://zmwo.com</a>    主题版本9.0.1<div id="MicrosoftTranslatorWidget" class="Dark" style="position: fixed;right: 0;top: 20%;z-index: 9999;color:white;background-color:#555555"></div><script type="text/javascript">setTimeout(function(){{var s=document.createElement("script");s.type="text/javascript";s.charset="UTF-8";s.src=((location && location.href && location.href.indexOf("https") == 0)?"https://ssl.microsofttranslator.com":"http://www.microsofttranslator.com")+"/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=False&ui=true&settings=undefined&from=en&to=zh-chs";var p=document.getElementsByTagName("head")[0]||document.documentElement;p.insertBefore(s,p.firstChild); }},0);</script>';
+  c.filter(":contains('Theme panel')").each(function() { $(this).html($(this).html().replace("Theme panel",  "控制面板"));}); 
+  c.filter(":contains('version: 9.0.1')").each(function() { $(this).html($(this).html().replace("version: 9.0.1", zm_by ));}); 
   //保存按钮
   var s_in = $('#td_button_save_panel').val();
   var s_en = 'SAVE SETTINGS';
   var $s_zh = s_in.replace(s_en,'保存设置');
   $('#td_button_save_panel').val($s_zh);
-  //----面板>标题	-------	
-    var d = $("#td-col-right");
-  //面板>标题>头部
-  d.filter(":contains('Header Style')").each(function() { $(this).html($(this).html().replace("Header Style", "头部样式"));}); 
-  d.filter(":contains('Top Bar')").each(function() { $(this).html($(this).html().replace("Top Bar", "顶部工具栏"));}); 
-  d.filter(":contains('Main Menu')").each(function() { $(this).html($(this).html().replace("Main Menu", "主菜单"));}); 
-  d.filter(":contains('Favicon')").each(function() { $(this).html($(this).html().replace("Logo & Favicon", "Logo 和 Favicon"));}); 
-  d.filter(":contains('Mobile')").each(function() { $(this).html($(this).html().replace("Logo for Mobile", "手机版Logo"));}); 
-  d.filter(":contains('Header background')").each(function() { $(this).html($(this).html().replace("Header background", "头部背景"));}); 
-  d.filter(":contains('Bookmarklet')").each(function() { $(this).html($(this).html().replace("iOS Bookmarklet", "手机书签图标"));}); 
-  //面板>标题>底部
-  d.filter(":contains('Footer settings')").each(function() { $(this).html($(this).html().replace("Footer settings", "底部设置"));}); 
-  d.filter(":contains('Instagram settings')").each(function() { $(this).html($(this).html().replace("Instagram settings", "Instagram设置"));}); 
-  var d_i = new RegExp("Footer info content", "g");//全局替换
-  d.filter(":contains('Footer info content')").each(function() { $(this).html($(this).html().replace( d_i , "底部信息"));}); 
-  d.filter(":contains('Footer background')").each(function() { $(this).html($(this).html().replace("Footer background", "底部背景"));}); 
-  d.filter(":contains('Sub footer settings')").each(function() { $(this).html($(this).html().replace("Sub footer settings", "底部单元"));}); 
-  //面板>头部
-  var e = $("#td-panel-header");
-  e.filter(":contains('HEADER STYLE')").each(function() { $(this).html($(this).html().replace("HEADER STYLE", "头部样式"));}); 
-  e.filter(":contains('SEARCH POSITION')").each(function() { $(this).html($(this).html().replace("SEARCH POSITION", "搜索框位置"));}); 
-  var e_y = new RegExp("Style", "g");//全局替换 td_vso_caption
-   $(".td_vso_caption").filter(":contains('Style')").each(function() { $(this).html($(this).html().replace( e_y , "样式"));}); 
-  var e_h = "Select the order in which the header elements will be arranged";
-  var e_h1 = ":contains('e_h')";
-  e.filter( e_h1 ).each(function() { $(this).html($(this).html().replace(e_h, "选择头部样式排列布局"));}); 
-  var e_s = "Select the search button placement area";
-  var e_s1 = ":contains('e_s')";  
-  e.filter( e_s1 ).each(function() { $(this).html($(this).html().replace(e_s, "选择搜索框位置"));}); 
-  
-  
-
-  
 });
